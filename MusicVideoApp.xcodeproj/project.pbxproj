@@ -54,14 +54,46 @@
 		E26D8A811CCF9D910045157A /* MusicVideoApp */ = {
 			isa = PBXGroup;
 			children = (
-				E26D8A821CCF9D910045157A /* AppDelegate.swift */,
-				E26D8A841CCF9D910045157A /* ViewController.swift */,
-				E26D8A861CCF9D910045157A /* Main.storyboard */,
-				E26D8A891CCF9D910045157A /* Assets.xcassets */,
-				E26D8A8B1CCF9D910045157A /* LaunchScreen.storyboard */,
-				E26D8A8E1CCF9D910045157A /* Info.plist */,
+				E26D8A9A1CCFFE510045157A /* Supporting Files */,
+				E26D8A971CCFFDFE0045157A /* Model */,
+				E26D8A981CCFFE0E0045157A /* Controller */,
+				E26D8A991CCFFE260045157A /* View */,
 			);
 			path = MusicVideoApp;
+			sourceTree = "<group>";
+		};
+		E26D8A971CCFFDFE0045157A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E26D8A981CCFFE0E0045157A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E26D8A841CCF9D910045157A /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E26D8A991CCFFE260045157A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E26D8A861CCF9D910045157A /* Main.storyboard */,
+				E26D8A8B1CCF9D910045157A /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E26D8A9A1CCFFE510045157A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E26D8A891CCF9D910045157A /* Assets.xcassets */,
+				E26D8A8E1CCF9D910045157A /* Info.plist */,
+				E26D8A821CCF9D910045157A /* AppDelegate.swift */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +129,14 @@
 					E26D8A7E1CCF9D910045157A = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 84H9TR7RZ9;
+						SystemCapabilities = {
+							com.apple.HomeKit = {
+								enabled = 0;
+							};
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -254,7 +294,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MusicVideoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = seleemdeveloper.MusicVideoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seleemdeveloper.MusicVideoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -265,7 +305,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MusicVideoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = seleemdeveloper.MusicVideoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seleemdeveloper.MusicVideoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
