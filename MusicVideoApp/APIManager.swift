@@ -23,18 +23,34 @@ class APIManager
         {
          (data, response, error) in
          
-            dispatch_async(dispatch_get_main_queue())
-            {
+            
              if error != nil
              {
+              dispatch_async(dispatch_get_main_queue())
+              {
               completion(result: error!.localizedDescription)
+              }
              }
              else
              {
-              completion(result: "NSURLSession succefull")
-              print(data!)
+             
+                do
+                {
+                    if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? [String:AnyObject]
+                    {
+                     print(json)
+                    }
+                }
+                catch
+                {
+                 dispatch_async(dispatch_get_main_queue())
+                 {
+                  completion(result: "error in JSONSerialization")
+                 }
+                }
+                
              }
-            }
+            
         }
         task.resume()
     }
